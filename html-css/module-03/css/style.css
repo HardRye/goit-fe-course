@@ -103,10 +103,13 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   line-height: 24px;
-  color: #626262;
-  background-color: #fff;
-  padding: 10px 20px; 
+  height: 58px;
+  width: 162px;
+  padding: 0;
 
+  color: #626262;
+  background-color: #fff; 
+  cursor: pointer;
 
   align-items: center;
   border-width: 1px;
@@ -114,3 +117,6 @@ body {
   border-color: #626262;
   border-image: initial;
 }
+
+
+
