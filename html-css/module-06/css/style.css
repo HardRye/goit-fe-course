@@ -1,0 +1,447 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; 
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0; 
+}
+
+
+/* MENU CSS */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 30px;  
+  margin-top: 24px;
+  margin-bottom: 120px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #95e1d3;
+
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear; 
+}
+
+.menu > a { 
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+ 
+.menu-list { 
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 490px;
+}
+ 
+.menu-list-item a {
+  text-transform: uppercase; 
+  padding: 0 25px; 
+  width: 100%;
+  font-weight: bold;
+}
+
+.menu-list-item:last-child a {
+  padding-right: 0;
+} 
+
+.menu-list-item {
+  position: relative; 
+}
+
+.menu-list-item a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: -10px; 
+  /* padding-top: 10px; */
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  height: 13px;
+  border-bottom: 3px solid #f38181; 
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: linear; 
+}
+
+.menu-list-item:last-of-type a::after {
+  left: 25px;
+  transform: translateX(0);
+  width: calc(100% - 25px);
+}
+
+.menu-list-item a:hover,
+.menu-list-item a:focus {
+  color: #f38181;
+}
+
+.menu-list-item a:hover::after {
+  opacity: 1; 
+}
+
+
+/* MAIN CSS */
+.section {
+  width: 1182px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.section .pre-headline,
+.section .headline {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.section .pre-headline {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px; 
+  margin-bottom: 17px;
+}
+
+.section .headline {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.section .headline::after {
+  display: block;
+  content: "";
+  margin: 0 auto;
+  margin-top: 39px;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.article-item {
+  position: relative;
+  width: 382px;
+  margin: 0;
+  margin-bottom: 96px;
+  padding: 0;
+  list-style: none;
+
+  /* temporary */
+  /* border: 1px solid #000;  */
+}
+
+.article-item:nth-last-of-type(-n+3) {
+  margin-bottom: 86px;
+}
+
+.article-topic, .article-text {
+  margin: 0;
+  padding: 0;
+  padding-left: 80px;
+}
+
+.article-topic {
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.article-text {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: #999999;
+}
+
+.article-topic::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-item:nth-child(1) .article-topic::before {
+  background-image: url(../img/article-icons/ALARM.png);
+}
+.article-item:nth-child(2) .article-topic::before {
+  background-image: url(../img/article-icons/LINE_GRAPH.png);
+}
+.article-item:nth-child(3) .article-topic::before {
+  background-image: url(../img/article-icons/COMPUTER_OK.png);
+}
+.article-item:nth-child(4) .article-topic::before {
+  background-image: url(../img/article-icons/BOOK.png);
+}
+.article-item:nth-child(5) .article-topic::before {
+  background-image: url(../img/article-icons/HOME.png);
+}
+.article-item:nth-child(6) .article-topic::before {
+  background-image: url(../img/article-icons/RECTANGLE.png);
+}
+
+/* TEAM STYLES */
+.section .team-description {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 90px;
+  max-width: 980px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 24px;
+  font-size: 15px;
+  color: #999999;
+}
+
+.section .headline-team {
+  margin-bottom: 44px;
+}
+ 
+.section .team-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* CARD CSS */
+.team-item {
+  position: relative;
+  display: block;
+  width: 380px;
+}
+
+.card-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 380px;
+  height: 470px;
+  background-image: 
+    linear-gradient(
+        to top
+        , rgba(252,227,138,0.9)
+        , rgba(243,129,129,0.9));
+  opacity: 0;
+  z-index: 1;
+
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;  
+}
+
+.card-underlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 380px;
+  height: 470px;
+  background-color: #95e1d3;
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;  
+}
+
+.socials { 
+  height: 56px;
+  width: 227px;
+  opacity: 0;
+  z-index: 2;
+
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;  
+}
+
+.icons {  
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icons a {
+  display: block;
+  box-sizing: border-box;
+  width: 56px;
+  height: 56px;
+  background-color: #fce38a;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;  
+}
+
+.icon-facebook {
+  background-image: url(../img/social-icons/facebook.png);
+}
+.icon-twitter {
+  background-image: url(../img/social-icons/twitter.png);
+}
+.icon-pinterest {
+  background-image: url(../img/social-icons/pinterest.png);
+}
+.icon-instagram {
+  background-image: url(../img/social-icons/instagram.png);
+}
+
+
+.team-item:hover .card-overlay,
+.team-item:hover .card-underlay,
+.team-item:hover .socials {
+  opacity: 1;
+} 
+
+.team-item:hover img,
+.team-item:hover .card-overlay {
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;    
+}
+
+.team-item:hover img,
+.team-item:hover .card-overlay {
+  transform: translate(-10px, -10px);
+}
+
+.icons a:hover {
+  background-color: #95e1d3;
+}
+/* CARD HOVER EFECTS CSS FINISHED */
+
+.team-member-name {
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 13px;
+}
+
+.team-member-occupation {
+  text-align: center;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;  
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  height: 63px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.copyrigts {
+  margin: 0;
+  padding: 0;
+  padding-left: 24px;
+  font-size: 14px;
+}
+
+.copyrigts a { 
+  text-decoration: none;
+  color: #95e1d3;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear; 
+}
+
+.copyrigts a:hover {
+  color: #f38181;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button-submit {
+  border: none;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-submit:hover {
+  background-color: #f38181;
+}
+
+.subscribe-wrapper form input {
+  box-sizing: border-box;
+  width: 229px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  border-right: none;
+}
+
+.subscribe-wrapper form input::placeholder {
+  padding-left: 12px;
+  font-size: 15px;
+  line-height: 24px;
+  font-style: italic;
+  color: #e7e7e7;
+}
