@@ -1,0 +1,258 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 940px;
+}
+
+/* HEADER START */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 102px;
+}
+
+.menu > a {
+  font-size: 26px;
+  line-height: 41px;
+  font-family: 'Wisdom', serif; 
+  color: #fed136;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  width: 485px;
+}
+
+.menu-list-item a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px; 
+  margin: 0;
+  padding: 0 15px; 
+}
+
+.menu-list .menu-list-item:first-of-type a {
+  padding-left: 0;
+}
+.menu-list .menu-list-item:last-of-type a {
+  padding-right: 0;
+} 
+
+.menu-list-item a:hover,
+.menu-list-item a:focus {
+  color: #fed136;
+}
+/* HEADER FINISH */
+
+/* MAIN START */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title, .section-description {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+  color: #222222; 
+}
+
+.section-description {
+  font-size: 16px;
+  color: #777777;
+  font-style: italic;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 70px; 
+}
+
+.articles-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 75px;
+}
+
+.article-item { 
+  width: 290px;
+  text-align: center;
+}
+
+.article-title, .article-text {
+  margin: 0;
+  padding: 0;
+}
+
+.article-title { 
+    font-size: 18px; 
+    color: #222222;
+    font-weight: bold;
+    line-height: 75px;
+    margin-bottom: -20px; 
+}
+
+.article-text {
+  font-size: 14px;  
+  font-family: 'Roboto Slab', serif;
+  color: #777777;
+}
+
+
+.article-title::before {
+  display: block;
+  content: '';
+  width: 74px;
+  height: 74px;
+  margin: 0 auto; 
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-item:nth-of-type(1) .article-title::before {
+  background-image: 
+  url(../img/icons/Icon-Basket.png),
+  url(../img/icons/Circle.png);
+}
+.article-item:nth-of-type(2) .article-title::before {
+  background-image: 
+  url(../img/icons/Icon-Laptop.png),
+  url(../img/icons/Circle.png);
+}
+.article-item:nth-of-type(3) .article-title::before {
+  background-image: 
+  url(../img/icons/Icon-Locked.png),
+  url(../img/icons/Circle.png);
+}
+
+/* FOOTER CSS START */
+.footer {
+  height: 675px;
+  background-color: #222222;
+
+  background-image: url(../img/Map_Image.png);
+  background-repeat: no-repeat;
+  background-position: 100% calc(100% - 20px);
+}
+
+.footer-title {
+  margin-top: 90px;
+  color: #fff;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  margin: 0 auto; 
+  width: 940px;
+}
+
+.personals-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 210px; 
+}
+
+.personals {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+  width: inherit;
+}
+
+.personals-block, .textarea-block {
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+
+  width: 455px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.personals-block::placeholder, 
+.textarea-block::placeholder {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #bbbbbb;
+}
+
+.personals-block {
+  height: 52px; 
+}
+
+.textarea-block {
+  padding-top: 10px;
+  height: 210px;
+  resize: none;
+  
+  border-radius: 5px;
+}
+
+
+.button {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 28px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 240px;
+  height: 66px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #fed136;
+}
+ 
+
+input:focus, textarea:focus, select:focus {
+  outline-offset: 0; 
+  /* deactivete focus border with -2px paddings */
+}
+
+.required:valid:not(:placeholder-shown) {
+  outline: green solid 2px;
+}
+
+.required:invalid:not(:placeholder-shown) {
+  outline: red solid 2px;
+}
