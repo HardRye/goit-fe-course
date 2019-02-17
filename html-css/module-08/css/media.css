@@ -1,0 +1,94 @@
+@media (min-width: 768px) {
+
+  .container {
+    width: 768px;
+  }
+
+  .header, .banner {
+    min-height: 700px;
+  }
+
+  .banner {
+    background-image: 
+    linear-gradient(to left
+    , rgba(26, 25, 21, .2) 
+    , rgba(26, 25, 21, .2))
+    , url("../img/banner_tablet.jpg");
+  }
+
+  .menu {
+    flex-direction: row;
+    height: inherit;
+    width: 670px;
+    margin-bottom: 140px;
+  }
+  
+  .site-name, .log-sign-wrapper {
+    margin-top: 38px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .site-name {
+    line-height: 36px;
+  }
+
+  .title-wrapper {
+    max-width: 492px;
+  }
+
+  .title {
+    font-size: 52px; 
+    line-height: 62px;
+    margin-bottom: 30px;
+  }
+
+  .title-add {
+    font-size: 24px;
+    display: inline;
+    width: inherit;
+    margin-bottom: 30px;
+  }
+
+  .title-link {
+    width: 226px;
+    margin: 0 auto;  
+  }
+
+  .section-title {
+    width: inherit;
+    margin-bottom: 30px;
+  }
+
+  .section-articles {
+    width: 492px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+    margin-bottom: 36px;
+  }
+
+  .article-wrapper {
+    width: 236px; 
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 52px; 
+  }
+
+  .article1, .article3 {
+    order: 1;
+  }
+  .article2, .article4 {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .articles-loader {
+    margin-bottom: 40px;
+    width: 193px;
+  }
+
+}
+
+
