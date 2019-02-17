@@ -92,3 +92,38 @@
 }
 
 
+@media (min-width: 1440px) {
+  .container {
+    width: 940px;
+  }
+
+  .banner {
+    background-image: 
+    linear-gradient(to left
+    , rgba(26, 25, 21, .2) 
+    , rgba(26, 25, 21, .2))
+    , url("../img/banner_desktop.jpg");
+  }
+ 
+  .section-title {
+    margin-top: 68px;
+  }
+
+  .section-articles {
+    margin-bottom: 35px;
+  }
+
+  .article-wrapper {
+    width: 220px;
+  }
+
+  .article1, .article3,
+  .article2, .article4 { 
+    margin-bottom: 0;
+  }
+
+  .articles-loader {
+    margin-bottom: 74px;
+  }
+
+}
