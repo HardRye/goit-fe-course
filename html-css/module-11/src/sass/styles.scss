@@ -1,0 +1,31 @@
+/*
+  Import partials below
+*/
+@import "./normalize";
+
+// variables
+@import "./variables";
+
+// base styles
+@import "./base";
+
+@import "./components/components";
+@import "./components/section";
+
+/* HEADER STYLES */
+
+@import "./block/header";
+
+/* SERVICES */
+
+@import "./block/services";
+
+/* TEAM */
+
+@import "./block/team";
+
+/* MAIN STYLES END */
+
+/* FOOTER STYLES */
+
+@import "./block/footer";
