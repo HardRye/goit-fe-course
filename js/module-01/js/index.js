@@ -15,11 +15,11 @@ let message;
 
 let userPassword = prompt("Enter password");
 
-if (!userPassword /*userPassword === null */) {
+if (userPassword === null) {
   message = "Отменено пользователем!";
 } else if (userPassword === ADMIN_PASSWORD) {
   message = "Добро пожаловать!";
-} else if (userPassword !== ADMIN_PASSWORD) {
+} else {
   message = "Доступ запрещен, неверный пароль!";
 }
 
@@ -44,21 +44,21 @@ alert(message);
 'Вы купили [число] дроидов, на счету осталось [число] кредитов.'.
 */
 
-// let credits = 23580;
-// let pricePerDroid = 3000;
+let credits = 23580;
+let pricePerDroid = 3000;
 
-// let count = prompt(`Сколько дроидов желаете купить? На вашем счету ${credits} кредитов. Цена ремонтного дроида ${pricePerDroid} кредитов.`, "");
+let count = prompt(`Сколько дроидов желаете купить? На вашем счету ${credits} кредитов. Цена ремонтного дроида ${pricePerDroid} кредитов.`, "");
 
-// if (!count) {
-//   console.log("Отменено пользователем!");
-// } else {
-//   let totalPrice = Number(count) * pricePerDroid;
-//   if (totalPrice > credits) {
-//     console.log("Недостаточно средств на счету!");
-//   } else { console.log(`Вы купили ${count} дроидов, на счету осталось ${credits - totalPrice} кредитов.`); }
-//   ;
-// }
-// ;
+if (count === null) {
+  console.log("Отменено пользователем!");
+} else {
+  let totalPrice = Number(count) * pricePerDroid;
+  if (totalPrice > credits) {
+    console.log("Недостаточно средств на счету!");
+  } else { console.log(`Вы купили ${count} дроидов, на счету осталось ${credits - totalPrice} кредитов.`); }
+  ;
+}
+;
 
 //-------------------------------------------------------------------------------------------------------------------------
 
@@ -75,19 +75,34 @@ alert(message);
 PS: используй switch
 */
 
-// const priceChina = 100;
-// const priceSouthAmerica = 250;
-// const priceAustralia = 170;
-// const priceIndia = 80;
-// const priceJamaica = 120;
+const priceChina = 100;
+const priceSouthAmerica = 250;
+const priceAustralia = 170;
+const priceIndia = 80;
+const priceJamaica = 120;
 
-// let userCountry = prompt("Enter your country");
+let userCountry = prompt("Enter your country");
 
-// switch (userCountry.toLowerCase()) {
-//   case "китай": alert(`Доставка в ${userCountry} будет стоить ${priceChina} кредитов`); break;
-//   case "южная америка": alert(`Доставка в ${userCountry} будет стоить ${priceSouthAmerica} кредитов`); break;
-//   case "австралия": alert(`Доставка в ${userCountry} будет стоить ${priceAustralia} кредитов`); break;
-//   case "индия": alert(`Доставка в ${userCountry} будет стоить ${priceIndia} кредитов`); break;
-//   case "ямайка": alert(`Доставка в ${userCountry} будет стоить ${priceJamaica} кредитов`); break;
-//   default: alert("В вашей стране доставка не доступна");
-// }
+if (userCountry === null) {
+  alert("Отменено пользователем!");
+} else {
+  switch (userCountry.toLowerCase()) {
+    case "китай":
+      alert(`Доставка в ${userCountry} будет стоить ${priceChina} кредитов`);
+      break;
+    case "южная америка":
+      alert(`Доставка в ${userCountry} будет стоить ${priceSouthAmerica} кредитов`);
+      break;
+    case "австралия":
+      alert(`Доставка в ${userCountry} будет стоить ${priceAustralia} кредитов`);
+      break;
+    case "индия":
+      alert(`Доставка в ${userCountry} будет стоить ${priceIndia} кредитов`);
+      break;
+    case "ямайка":
+      alert(`Доставка в ${userCountry} будет стоить ${priceJamaica} кредитов`);
+      break;
+    default:
+      alert("В вашей стране доставка не доступна");
+  }
+}
