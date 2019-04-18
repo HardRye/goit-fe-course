@@ -54,11 +54,11 @@ console.log(`Общая сумма чисел равна ${total}`);
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attemptsLeft = 3;
-let input;
+let userInput;
 
 do {
-  input = prompt("Введите пароль");
-  if (input !== null) {
+  userInput = prompt("Введите пароль");
+  if (userInput !== null) {
     if (passwords.includes(input)) {
       alert('Добро пожаловать!');
     } else if (attemptsLeft - 1 === 0) {
@@ -69,4 +69,4 @@ do {
       alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
     }
   }
-} while (input !== null && attemptsLeft !== 0 && passwords.includes(input) !== true);
+} while (userInput !== null && attemptsLeft !== 0 && passwords.includes(userInput) !== true);
