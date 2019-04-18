@@ -59,7 +59,7 @@ let userInput;
 do {
   userInput = prompt("Введите пароль");
   if (userInput !== null) {
-    if (passwords.includes(input)) {
+    if (passwords.includes(userInput)) {
       alert('Добро пожаловать!');
     } else if (attemptsLeft - 1 === 0) {
       attemptsLeft = attemptsLeft - 1;
