@@ -9,46 +9,46 @@ const Priority = {
 const notepad = {
   notes: [],
   getNotes() {
-    return notepad.notes;
+    return this.notes;
   },
   findNoteById(id) {
-    for (let el of notepad.notes) {
+    for (let el of this.notes) {
       if (id === el.id) return el;
     }
   },
   saveNote(note) {
-    notepad.notes.push(note);
+    this.notes.push(note);
     return note;
   },
   deleteNote(id) {
-    const index = notepad.notes.indexOf(notepad.findNoteById(id));
-    notepad.notes.splice(index, 1);
+    const index = this.notes.indexOf(this.findNoteById(id));
+    this.notes.splice(index, 1);
   },
   updateNoteContent(id, updatedContent) {
-    const newObj = notepad.findNoteById(id);
-    const updContentKeyArr = Object.keys(updatedContent);
-    for (let el of updContentKeyArr) {
-      newObj[el] = updatedContent[el];
-    }
+    const newObj = {
+      ...this.findNoteById(id),
+      ...updatedContent,
+    };
+    this.notes[this.notes.indexOf(this.findNoteById(id))] = newObj;
     return newObj;
   },
   updateNotePriority(id, priority) {
-    const newObj = notepad.findNoteById(id);
+    const newObj = this.findNoteById(id);
     newObj.priority = priority;
     return newObj;
   },
   filterNotesByQuery(query) {
     const queryNotes = [];
-    for (let el of notepad.notes) {
-      const arrTitle = el.title.toLowerCase().split(" ");
-      const arrBody = el.body.toLowerCase().split(" ");
-      if (arrTitle.includes(query.toLowerCase()) || arrBody.includes(query.toLowerCase())) queryNotes.push(el);
+    for (let el of this.notes) {
+      const strTitle = el.title.toLowerCase();
+      const strBody = el.body.toLowerCase();
+      if (strTitle.includes(query.toLowerCase()) || strBody.includes(query.toLowerCase())) queryNotes.push(el);
     }
     return queryNotes;
   },
   filterNotesByPriority(priority) {
     const priorityNotes = [];
-    for (let el of notepad.notes) {
+    for (let el of this.notes) {
       if (priority === el.priority) priorityNotes.push(el);
     }
     return priorityNotes;
