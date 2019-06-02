@@ -32,14 +32,8 @@ class Notepad {
   }
 
   updateNoteContent(id, updatedContent) {
-    // const updatedNote = {
-    //   ...this.findNoteById(id),
-    //   ...updatedContent,
-    // };
-    // this._notes[this._notes.indexOf(this.findNoteById(id))] = updatedNote;
-    //return updatedNote;
     if (this.findNoteById(id)) {
-      return this._notes[this._notes.indexOf(this.findNoteById(id))] = Object.assign({}, this.findNoteById(id), updatedContent);
+      return Object.assign(this.findNoteById(id), updatedContent);
     }
   }
 
